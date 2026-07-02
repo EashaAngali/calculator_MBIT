@@ -1,0 +1,22 @@
+MBTI Calculator - Render Deployment
+
+Upload the contents of this ZIP directly into the GitHub repository root.
+Do not upload the ZIP itself as one folder.
+
+Correct GitHub structure:
+package.json
+pnpm-lock.yaml
+app/
+components/
+lib/
+public/
+next.config.mjs
+
+Render Web Service settings:
+Root Directory: leave blank
+Build Command: corepack enable && pnpm install --frozen-lockfile && pnpm build
+Start Command: pnpm start
+Environment Variable: NODE_VERSION=22.22.0
+
+After uploading to GitHub, deploy again with:
+Manual Deploy -> Clear build cache & deploy
